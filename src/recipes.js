@@ -11,7 +11,9 @@ const Recipes = (props) => {
               <div className="recipes__box">
                 <img className="recipe__box-img" src={el.image_url} alt={el.title} />
                 <div className="recipe__text">
-                  <h5 className="recipes__title">{el.title}</h5>
+                  <h5 className="recipes__title">
+                    {el.title.legth > 20 ? `${el.title}` : `${el.title.substring(0,25)}...`}
+                  </h5>
                   <p className="recipes__subtitle">Publisher: <span>
                     {el.publisher}
                   </span></p>
